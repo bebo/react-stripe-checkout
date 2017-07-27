@@ -13,7 +13,7 @@ export default class ReactStripeCheckout extends React.Component {
     ComponentClass: 'span',
     reconfigureOnUpdate: false,
     triggerEvent: 'onClick',
-    className: ''
+    className: 'donate--form--fields--item'
   }
 
   static propTypes = {

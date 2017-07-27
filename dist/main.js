@@ -373,7 +373,7 @@ ReactStripeCheckout.defaultProps = _defineProperty({
   ComponentClass: 'span',
   reconfigureOnUpdate: false,
   triggerEvent: 'onClick'
-}, 'className', '');
+}, 'className', 'donate--form--fields--item');
 ReactStripeCheckout.propTypes = {
   // Opens / closes the checkout modal by value
   // WARNING: does not work on mobile due to browser security restrictions
