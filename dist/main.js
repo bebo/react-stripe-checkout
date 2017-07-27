@@ -348,10 +348,14 @@ var ReactStripeCheckout = function (_React$Component) {
         ReactStripeCheckout.stripeHandler.close();
       }
 
-      var ComponentClass = this.props.ComponentClass;
+      var _props = this.props,
+          ComponentClass = _props.ComponentClass,
+          className = _props.className;
 
       if (this.props.children) {
-        return _react2.default.createElement(ComponentClass, _extends({}, _defineProperty({}, this.props.triggerEvent, this.onClick), {
+        return _react2.default.createElement(ComponentClass, _extends({
+          className: className
+        }, _defineProperty({}, this.props.triggerEvent, this.onClick), {
           children: this.props.children
         }));
       }
@@ -362,14 +366,14 @@ var ReactStripeCheckout = function (_React$Component) {
   return ReactStripeCheckout;
 }(_react2.default.Component);
 
-ReactStripeCheckout.defaultProps = {
+ReactStripeCheckout.defaultProps = _defineProperty({
   className: 'StripeCheckout',
   label: 'Pay With Card',
   locale: 'auto',
   ComponentClass: 'span',
   reconfigureOnUpdate: false,
   triggerEvent: 'onClick'
-};
+}, 'className', '');
 ReactStripeCheckout.propTypes = {
   // Opens / closes the checkout modal by value
   // WARNING: does not work on mobile due to browser security restrictions

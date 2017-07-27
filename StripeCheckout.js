@@ -13,6 +13,7 @@ export default class ReactStripeCheckout extends React.Component {
     ComponentClass: 'span',
     reconfigureOnUpdate: false,
     triggerEvent: 'onClick',
+    className: ''
   }
 
   static propTypes = {
@@ -476,10 +477,11 @@ export default class ReactStripeCheckout extends React.Component {
       ReactStripeCheckout.stripeHandler.close();
     }
 
-    const { ComponentClass } = this.props;
+    const { ComponentClass, className } = this.props;
     if (this.props.children) {
       return (
         <ComponentClass
+          className={className}
           {...{
             [this.props.triggerEvent]: this.onClick,
           }}
